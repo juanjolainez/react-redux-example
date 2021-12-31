@@ -6,7 +6,8 @@ const Auth = () => {
   const dispatch = useDispatch();
   const isAuthenticated = useSelector((state) => state.auth.isAuthenticated);
 
-  const loginHandler = () => {
+  const loginHandler = (event) => {
+    event.preventDefault();
     dispatch(authActions.login());
   };
 
